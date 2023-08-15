@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FleetingWhy Organization</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap">
+  <style>
+    body {
+      background-color: #111111;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .hero {
+      background-image: url('https://i.pinimg.com/736x/43/26/bc/4326bc5de92748dd463132f1c56e9add.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      animation: pulseBackground 3s ease-in-out infinite alternate;
+    }
+    @keyframes pulseBackground {
+      0% {
+        background-color: rgba(50, 100, 150, 0.5);
+      }
+      100% {
+        background-color: rgba(50, 100, 150, 0.7);
+      }
+    }
+    .text-highlight {
+      color: #FFCC00;
+    }
+    .btn {
+      background-color: #FFCC00;
+      color: #333333;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .btn:hover {
+      background-color: #FFAA00;
+      transform: scale(1.05);
+    }
+    .section-bawah {
+      background-color: #111111;
+      font-family: 'Ubuntu', sans-serif;
+      animation: pulseFont 3s ease-in-out infinite alternate;
+    }
+    @keyframes pulseFont {
+      0% {
+        font-size: 16px;
+      }
+      100% {
+        font-size: 18px;
+      }
+    }
+    .section-bawah h2, .section-bawah p {
+      color: #FFFFFF;
+    }
+    .footer {
+      background-color: #333333;
+      color: #FFFFFF;
+      padding: 40px 0;
+      text-align: center;
+    }
+    .footer a {
+      color: #FFCC00;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-widest mb-4">
+      Welcome to <span class="text-highlight">FleetingWhy</span> Organization
+    </h1>
+    <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 animate-flicker">
+      Embrace your inner weebs with us!
+    </p>
+    <a href="#" class="btn">Learn More</a>
+  </section>
+  
+  <section class="bg-white dark:bg-gray-900 section-bawah">
+    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+      <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">We didn't reinvent the wheel</h2>
+        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut felis id nisl commodo interdum non et tellus. Nullam dictum convallis massa at consectetur. Vivamus eu erat id libero consectetur pulvinar et id massa.</p>
+        <p>Integer vehicula felis et orci congue, vel varius nisi auctor. Vestibulum nec felis et nunc cursus tincidunt. Etiam bibendum libero nec metus varius ultricies. Sed condimentum mi ac lacinia aliquet.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mt-8">
+        <img class="w-full rounded-lg" src="https://assets.ppy.sh/beatmaps/1900602/covers/list@2x.jpg?1674496623" alt="Image 1">
+        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="https://wallpapercave.com/wp/wp11814619.png" alt="Image 2">
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <p>&copy; 2023 FleetingWhy Organization. All rights reserved. | Designed with <a href="#" target="_blank">Tailwind CSS</a></p>
+  </footer>
+</body>
+</html>
