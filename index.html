@@ -57,14 +57,6 @@
       font-family: 'Ubuntu', sans-serif;
       animation: pulseFont 3s ease-in-out infinite alternate;
     }
-    @keyframes pulseFont {
-      0% {
-        font-size: 16px;
-      }
-      100% {
-        font-size: 18px;
-      }
-    }
     .section-bawah h2, .section-bawah p {
       color: #FFFFFF;
     }
@@ -104,8 +96,34 @@
     </div>
   </section>
   
+<form name="FujitimmeC-for">
+        <div class="w-full lg:w-2/3 lg:mx-auto">
+          <div class="w-full px-4 mb-8">
+            <label for="name" class="text-base text-orange font-bold">Nama</label>
+            <input id="name" aria-describedby="name"
+            name="nama" type="text" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-orange focus:ring-1 focus:border-orange">
+          </div>
+          <div class="w-full px-4 mb-8">
+            <label for="email" class="text-base text-orange font-bold">Email</label>
+            <input type="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-orange focus:ring-1 focus:border-orange" id="Email" aria-describedby="email"
+            name="email">
+          </div>
+          <div class="w-full px-4 mb-8">
+            <label for="pesan" class="text-base text-orange font-bold">Pesan</label>
+            <textarea type="text"  id="pesan" name="pesan" class="h-32 w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-orange focus:ring-1 focus:border-orange">
+            </textarea>
+          </div>
+          <div class="w-full px-4">
+            <button class="btn-kirim text-base font-semibold text-white bg-orange py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Kirim</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
   <footer class="footer">
     <p>&copy; 2023 FleetingWhy Organization. All rights reserved. | Designed with <a href="#" target="_blank">Tailwind CSS</a></p>
   </footer>
+ <script src=",/pesan.js"></script>
 </body>
 </html>
