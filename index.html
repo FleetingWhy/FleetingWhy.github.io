@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap">
+  <link rel="icon" href="https://cdn.donmai.us/original/3a/0e/3a0e169147e763cb3082cfc8f1baec78.jpg" type="image/jpg">
   <style>
     body {
       background-color: #111111;
@@ -24,21 +25,12 @@
       align-items: center;
       text-align: center;
       position: relative;
-      animation: pulseBackground 3s ease-in-out infinite alternate;
-    }
-    @keyframes pulseBackground {
-      0% {
-        background-color: rgba(50, 100, 150, 0.5);
-      }
-      100% {
-        background-color: rgba(50, 100, 150, 0.7);
-      }
     }
     .text-highlight {
-      color: #FFCC00;
+      color: #0077ff;
     }
     .btn {
-      background-color: #FFCC00;
+      background-color: #0077ff;
       color: #333333;
       border: none;
       padding: 10px 20px;
@@ -49,13 +41,12 @@
       transition: background-color 0.3s, transform 0.3s;
     }
     .btn:hover {
-      background-color: #FFAA00;
+      background-color: #0077ff;
       transform: scale(1.05);
     }
     .section-bawah {
-      background-color: #111111;
+      background-color: #0B0B0B;
       font-family: 'Ubuntu', sans-serif;
-      animation: pulseFont 3s ease-in-out infinite alternate;
     }
     .section-bawah h2, .section-bawah p {
       color: #FFFFFF;
@@ -67,22 +58,50 @@
       text-align: center;
     }
     .footer a {
-      color: #FFCC00;
+      color: #0077ff;
     }
   </style>
 </head>
 <body>
-  <section class="hero">
+  <nav class="fixed top-0 w-full bg-gray-300 border-b border-gray-200 dark:bg-gray-900" id="navbar">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="#" class="flex items-center">
+          <img src="https://avatars.githubusercontent.com/u/142360407?s=200&v=4" class="h-8 mr-3" alt="Flowbite Logo" />
+          <span class="self-center text-white text-2xl font-semibold whitespace-nowrap dark:text-white">FleetingWhy</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-300 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-gray-300 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="#home" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-300 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-300 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          </li>
+          <li>
+            <a href="#msg" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-300 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <section class="hero pt-20" id="home">
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-widest mb-4">
       Welcome to <span class="text-highlight">FleetingWhy</span> Organization
     </h1>
     <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 animate-flicker">
       Embrace your inner weebs with us!
     </p>
-    <a href="#" class="btn">Learn More</a>
+    <a href="https://github.com/FleetingWhy" target="_blank" class="btn">Learn More</a>
   </section>
   
-  <section class="bg-white dark:bg-gray-900 section-bawah">
+  <section class="bg-gray-300 dark:bg-gray-900 section-bawah">
     <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
       <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">We didn't reinvent the wheel</h2>
@@ -95,35 +114,74 @@
       </div>
     </div>
   </section>
-  
-<form name="FujitimmeC-for">
+  <section class="bg-dark dark:bg-gray-900" id="about" >
+    <div class="w-full px-4">
+      <div class="max-w-xl mx-auto text-center mb-16">
+        <div class="font-medium text-medium text-secondary md:text-lg my-alert hidden">
+          <div class="flex justify-center">
+            <div role="status">
+              <svg aria-hidden="true" class="hidden btn-loading w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg aria-hidden="true" class="hidden btn-loading w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                  <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                </svg>                
+              </svg>
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="text-3xl text-center text-white mb-8" id="msg" >Send Message</h1>
+      <form name="FujitimmeC-for">
         <div class="w-full lg:w-2/3 lg:mx-auto">
-          <div class="w-full px-4 mb-8">
-            <label for="name" class="text-base text-orange font-bold">Nama</label>
-            <input id="name" aria-describedby="name"
-            name="nama" type="text" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-orange focus:ring-1 focus:border-orange">
+          <div class="w-full px-4 mb-6">
+            <label for="name" class="text-base text-white font-semibold mb-2">Name</label>
+            <input id="name" aria-describedby="name" name="nama" type="text" class="w-full bg-gray-800 text-white p-3 rounded-md focus:outline-none focus:ring-orange focus:ring-1 focus:border-orange">
           </div>
-          <div class="w-full px-4 mb-8">
-            <label for="email" class="text-base text-orange font-bold">Email</label>
-            <input type="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-orange focus:ring-1 focus:border-orange" id="Email" aria-describedby="email"
-            name="email">
+          <div class="w-full px-4 mb-6">
+            <label for="email" class="text-base text-white font-semibold mb-2">Email</label>
+            <input type="email" class="w-full bg-gray-800 text-white p-3 rounded-md focus:outline-none focus:ring-orange focus:ring-1 focus:border-orange" id="Email" aria-describedby="email" name="email">
           </div>
-          <div class="w-full px-4 mb-8">
-            <label for="pesan" class="text-base text-orange font-bold">Pesan</label>
-            <textarea type="text"  id="pesan" name="pesan" class="h-32 w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-orange focus:ring-1 focus:border-orange">
-            </textarea>
+          <div class="w-full px-4 mb-6">
+            <label for="pesan" class="text-base text-white font-semibold mb-2">Message</label>
+            <textarea type="text" id="pesan" name="pesan" class="h-32 w-full bg-gray-800 text-white p-3 rounded-md focus:outline-none focus:ring-orange focus:ring-1 focus:border-orange"></textarea>
           </div>
           <div class="w-full px-4">
-            <button class="btn-kirim text-base font-semibold text-white bg-orange py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Kirim</button>
+            <button class="btn-kirim text-base font-semibold text-white bg-orange py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Send</button>
           </div>
         </div>
       </form>
-    </div>
+      
   </section>
-
+  
   <footer class="footer">
     <p>&copy; 2023 FleetingWhy Organization. All rights reserved. | Designed with <a href="#" target="_blank">Tailwind CSS</a></p>
   </footer>
- <script src=",/pesan.js"></script>
-</body>
-</html>
+  <script>
+ document.addEventListener("DOMContentLoaded", () => {
+      const navbarToggle = document.querySelector('[data-collapse-toggle="navbar-default"]');
+      const navbar = document.getElementById('navbar-default');
+      const threshold = 300;
+      let isNavbarSticky = false;
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY >= threshold && !isNavbarSticky) {
+          navbar.classList.add('sticky', 'shadow-md');
+          navbar.classList.remove('fixed');
+          isNavbarSticky = true;
+        } else if (window.scrollY < threshold && isNavbarSticky) {
+          navbar.classList.remove('sticky', 'shadow-md');
+          navbar.classList.add('fixed');
+          isNavbarSticky = false;
+        }
+      });
+
+      navbarToggle.addEventListener('click', () => {
+        navbar.classList.toggle('hidden');
+      });
+    });
+  </script>
+  <scrip type="module" src="./src/pesan.js"></script>
+  </body>
+  </html>
+  
