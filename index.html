@@ -162,31 +162,6 @@
   <footer class="footer">
     <p>&copy; 2023 FleetingWhy Organization. All rights reserved. | Designed with <a href="#" target="_blank">Tailwind CSS</a></p>
   </footer>
-  <script>
- document.addEventListener("DOMContentLoaded", () => {
-      const navbarToggle = document.querySelector('[data-collapse-toggle="navbar-default"]');
-      const navbar = document.getElementById('navbar-default');
-      const threshold = 300;
-      let isNavbarSticky = false;
-
-      window.addEventListener('scroll', () => {
-        if (window.scrollY >= threshold && !isNavbarSticky) {
-          navbar.classList.add('sticky', 'shadow-md');
-          navbar.classList.remove('fixed');
-          isNavbarSticky = true;
-        } else if (window.scrollY < threshold && isNavbarSticky) {
-          navbar.classList.remove('sticky', 'shadow-md');
-          navbar.classList.add('fixed');
-          isNavbarSticky = false;
-        }
-      });
-
-      navbarToggle.addEventListener('click', () => {
-        navbar.classList.toggle('hidden');
-      });
-    });
-  </script>
-  <scrip type="module" src="./src/pesan.js"></script>
   </body>
   </html>
   
