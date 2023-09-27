@@ -9,11 +9,30 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap">
   <link rel="icon" href="https://cdn.donmai.us/original/3a/0e/3a0e169147e763cb3082cfc8f1baec78.jpg" type="image/jpg">
-  <style>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+ <style>
     body {
       background-color: #111111;
       font-family: 'Orbitron', sans-serif;
     }
+    /* nav{
+      z-index: 100;
+    } */
+        /* Hide scrollbars in WebKit-based browsers */
+    *::-webkit-scrollbar {
+      width: 0.1em; /* Set the width of the scrollbar to a minimal value */
+    }
+
+    *::-webkit-scrollbar-track {
+      background-color: transparent; /* Set the background color of the scrollbar track */
+    }
+
+    *::-webkit-scrollbar-thumb {
+      background-color: transparent; /* Set the background color of the scrollbar thumb */
+      border: none; /* Remove the scrollbar thumb border */
+    }
+
     .hero {
       background-image: url('https://i.pinimg.com/736x/43/26/bc/4326bc5de92748dd463132f1c56e9add.jpg');
       background-size: cover;
@@ -60,6 +79,93 @@
     .footer a {
       color: #0077ff;
     }
+.svg-inline--fa {
+  vertical-align: -0.200em;
+}
+
+.rounded-social-buttons {
+  text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
+  font-size: 25px;
+}
+
+.rounded-social-buttons .social-button.facebook {
+  background: #3b5998;
+}
+
+.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+  color: #3b5998;
+  background: #fefefe;
+  border-color: #3b5998;
+}
+
+.rounded-social-buttons .social-button.twitter {
+  background: #55acee;
+}
+
+.rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+  color: #55acee;
+  background: #fefefe;
+  border-color: #55acee;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+  color: #007bb5;
+  background: #fefefe;
+  border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.youtube {
+  background: #bb0000;
+}
+
+.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+  color: #bb0000;
+  background: #fefefe;
+  border-color: #bb0000;
+}
+
+.rounded-social-buttons .social-button.instagram {
+  background: #125688;
+}
+
+.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+  color: #125688;
+  background: #fefefe;
+  border-color: #125688;
+}
   </style>
 </head>
 <body>
@@ -83,9 +189,6 @@
           <li>
             <a href="#about" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-300 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
           </li>
-          <li>
-            <a href="#msg" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-300 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-          </li>
         </ul>
       </div>
     </div>
@@ -100,13 +203,74 @@
     </p>
     <a href="https://github.com/FleetingWhy" target="_blank" class="btn">Learn More</a>
   </section>
+
+
+
+  <div class="flex items-center justify-center w-screen h-screen text-black bg-slate-900">
+
+    <!-- Component Start -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="w-48 bg-gray-300 shadow-2xl p-6 rounded-2xl">
+        <div class="flex items-center">
+          <span class="flex items-center justify-center w-6 h-6 rounded-full bg-pink-100">
+            <svg class="w-4 h-4 stroke-current text-pink-600"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </span>
+          <span class="ml-2 text-sm font-medium text-gray-500">Followers</span>
+        </div>
+        <span class="block text-4xl font-semibold mt-4">1,320</span>
+        <div class="flex text-xs mt-3 font-medium">
+          <span class="text-green-500">+8%</span>
+          <span class="ml-1 text-gray-500">last 14 days</span>
+        </div>
+      </div>
+      <div class="w-48 bg-gray-300 shadow-2xl p-6 rounded-2xl">
+        <div class="flex items-center">
+          <span class="flex items-center justify-center w-6 h-6 rounded-full bg-red-100">
+            <svg class="w-4 h-4 stroke-current text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </span>
+          <span class="ml-2 text-sm font-medium text-gray-500">Likes</span>
+        </div>
+        <span class="block text-4xl font-semibold mt-4">3,814</span>
+        <div class="flex text-xs mt-3 font-medium">
+          <span class="text-green-500">+12%</span>
+          <span class="ml-1 text-gray-500">last 14 days</span>
+        </div>
+      </div>
+      <div class="w-48 bg-gray-300 shadow-2xl p-6 rounded-2xl">
+        <div class="flex items-center">
+          <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-100">
+            <svg class="w-4 h-4 stroke-current text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </span>
+          <span class="ml-2 text-sm font-medium text-gray-500">Comments</span>
+        </div>
+        <span class="block text-4xl font-semibold mt-4">264</span>
+        <div class="flex text-xs mt-3 font-medium">
+          <span class="text-red-500">-2%</span>
+          <span class="ml-1 text-gray-500">last 14 days</span>
+        </div>
+      </div>
+    </div>
+    <!-- Component End  -->
+  
+  </div>
+  
+
   
   <section class="bg-gray-300 dark:bg-gray-900 section-bawah" id="about" >
     <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
       <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">We didn't reinvent the wheel</h2>
-        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut felis id nisl commodo interdum non et tellus. Nullam dictum convallis massa at consectetur. Vivamus eu erat id libero consectetur pulvinar et id massa.</p>
-        <p>Integer vehicula felis et orci congue, vel varius nisi auctor. Vestibulum nec felis et nunc cursus tincidunt. Etiam bibendum libero nec metus varius ultricies. Sed condimentum mi ac lacinia aliquet.</p>
+        <p class="mb-4">
+          Pertemanan, seperti biskuit dalam gelas minum teh berbentuk tabung dengan cangkir di atasnya yang bermimpi menjadi pesawat ulat bulu yang mengarungi langit sebelum terperosok dalam sambaran petir.</p>
+        <p>
+          FleetingWhy, organisasi yang tak pernah memberikan jawaban pasti mengenai alasan mengapa kita ada di dunia ini, seakan menjadi kumpulan filosof berjanggut panjang yang hanya berbicara dalam bahasa sains tak masuk akal dan mengadakan pertemuan di dalam lubang cacing. Namun, di balik semua itu, mereka menyimpan tekad yang kuat untuk menggali arti kehidupan, meskipun itu berarti mengikuti jejak seekor burung hantu yang mencari kebijaksanaan di tengah hujan meteor.
+        </p>
       </div>
       <div class="grid grid-cols-2 gap-4 mt-8">
         <img class="w-full rounded-lg" src="https://assets.ppy.sh/beatmaps/1900602/covers/list@2x.jpg?1674496623" alt="Image 1">
@@ -114,54 +278,84 @@
       </div>
     </div>
   </section>
-  <section class="bg-dark dark:bg-gray-900"  >
-    <div class="w-full px-4">
-      <div class="max-w-xl mx-auto text-center mb-16">
-        <div class="font-medium text-medium text-secondary md:text-lg my-alert hidden">
-          <div class="flex justify-center">
-            <div role="status">
-              <svg aria-hidden="true" class="hidden btn-loading w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <svg aria-hidden="true" class="hidden btn-loading w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
-                  <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
-                </svg>                
-              </svg>
-              <span class="sr-only">Loading...</span>
+
+
+<!-- section_2 --> 
+<div class="max-w-screen-2xl mx-auto px-4 py-16 lg:py-24 relative bg-slate-400">
+  <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-100 ">Gallery</h1>
+  <div class="flex flex-col md:flex-row gap-2">
+
+      <div class="flex flex-1 flex-col">
+          <div class="flex flex-1 flex-col">
+              <!-- img_01 --> 
+              <img class="object-cover h-full" 
+            src="https://images7.alphacoders.com/733/733948.png" alt="">
+            </div>
+      </div>
+      <div class="flex flex-1">
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <!-- img_02 -->
+              <img class="object-cover h-full" 
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYw_IcwS8OrH7NGDDtiTkT7ydvClZs0P9oZJNrRI3VatO_2NyjpoFK80G6OAGk4pI3ugM&usqp=CAU" alt="">
+            </div>
+            <div>
+              <!-- img_03 -->
+              <img class="object-cover h-full" 
+              src="https://i.pinimg.com/originals/43/49/e5/4349e51749373b47dd6083a0bd50ddb6.jpg" alt="">
+            </div>
+            <div>
+              <!-- img_04 -->
+              <img class="object-cover h-full" 
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_QzIe7swH6A2g0ZsLC8pp54sVCQ3UlQNa4g&usqp=CAU" alt="">
+            </div>
+            <div>
+              <!-- img_05 -->
+              <img class="object-cover h-full" 
+              src="https://m.media-amazon.com/images/M/MV5BNDBhMzBmYmUtNmQ2Mi00YTk4LTkyNjEtOTdmNjk3YjViMDM4XkEyXkFqcGdeQXVyNTM3MDMyMDQ@._V1_.jpg" alt="">
             </div>
           </div>
-        </div>
       </div>
-      <div class="w-full lg:w-2/3 lg:mx-auto mt-6 text-center">
-        <div id="success-msg" class="hidden text-green-500">
-          Pesan berhasil dikirim!
-        </div>
-      </div>
-      <h1 class="text-3xl text-center text-white mb-8" id="msg" >Send Message</h1>
-      <form name="FujitimmeC-for">
-        <div class="w-full lg:w-2/3 lg:mx-auto">
-          <div class="w-full px-4 mb-6">
-            <label for="name" class="text-base text-white font-semibold mb-2">Name</label>
-            <input id="name" aria-describedby="name" name="nama" type="text" class="w-full bg-gray-800 text-white p-3 rounded-md focus:outline-none focus:ring-orange focus:ring-1 focus:border-orange">
-          </div>
-          <div class="w-full px-4 mb-6">
-            <label for="email" class="text-base text-white font-semibold mb-2">Email</label>
-            <input type="email" class="w-full bg-gray-800 text-white p-3 rounded-md focus:outline-none focus:ring-orange focus:ring-1 focus:border-orange" id="Email" aria-describedby="email" name="email">
-          </div>
-          <div class="w-full px-4 mb-6">
-            <label for="pesan" class="text-base text-white font-semibold mb-2">Message</label>
-            <textarea type="text" id="pesan" name="pesan" class="h-32 w-full bg-gray-800 text-white p-3 rounded-md focus:outline-none focus:ring-orange focus:ring-1 focus:border-orange"></textarea>
-          </div>
-          <div class="w-full px-4">
-            <button class="btn-kirim text-base font-semibold text-white bg-orange py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Send</button>
-          </div>
-        </div>
-      </form>
-      
-  </section>
+  </div>
+</div>
+<div>
+  <div class="rounded-social-buttons ">
+                    <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+  </div>
+
   
-  <footer class="footer">
-    <p>&copy; 2023 FleetingWhy Organization. All rights reserved. | Designed with <a href="#" target="_blank">Tailwind CSS</a></p>
+  <footer class="footer ">
+    <p>&copy; 2023 FleetingWhy Organization. All rights reserved.</p>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+         const navbarToggle = document.querySelector('[data-collapse-toggle="navbar-default"]');
+         const navbar = document.getElementById('navbar-default');
+         const threshold = 300;
+         let isNavbarSticky = false;
+   
+         window.addEventListener('scroll', () => {
+           if (window.scrollY >= threshold && !isNavbarSticky) {
+             navbar.classList.add('sticky', 'shadow-md');
+             navbar.classList.remove('fixed');
+             isNavbarSticky = true;
+           } else if (window.scrollY < threshold && isNavbarSticky) {
+             navbar.classList.remove('sticky', 'shadow-md');
+             navbar.classList.add('fixed');
+             isNavbarSticky = false;
+           }
+         });
+   
+         navbarToggle.addEventListener('click', () => {
+           navbar.classList.toggle('hidden');
+         });
+       });
+     </script>
   </body>
   </html>
   
